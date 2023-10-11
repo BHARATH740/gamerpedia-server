@@ -8,7 +8,10 @@ dotenv.config();
 
 const PORT = process.env.PORT || 6000;
 const apiRoutes = require("./routes/apiRoutes");
-const allowedOrigins = ["http://localhost:4200"];
+const allowedOrigins = [
+  "http://localhost:4200",
+  "https://gamerpedia.netlify.app",
+];
 app.use((req, res, next) => {
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
